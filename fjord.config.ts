@@ -43,13 +43,13 @@ const fjord: FjordProps = {
     items: [
       {
         title: "About",
-        href: "/about",
+        href: "/",
         description:
           "Learn more about Fjord and how to use it for your next project.",
       },
       {
         title: "Contact",
-        href: "/contact",
+        href: "/",
         description:
           "Get in touch with us if you have any questions or feedback. We would love to hear from you.",
       },
