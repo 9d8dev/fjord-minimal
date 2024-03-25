@@ -3,7 +3,6 @@ import fjord from "@/fjord.config";
 
 // Component Imports
 import * as Craft from "@/components/craft";
-import SecondaryHero from "@/components/sections/secondary-hero";
 import ContentGrid from "@/components/content/content-grid";
 
 // Next Imports
@@ -24,13 +23,6 @@ export default async function AuthorPosts() {
 
   return (
     <Craft.Main>
-      <SecondaryHero
-        title={`${fjord.site_name} Authors`}
-        subtitle="Our Writers and Authors"
-      >
-        Select an Author below to see a list of their posts.
-      </SecondaryHero>
-
       <Craft.Section>
         <Craft.Container>
           <ContentGrid className="not-prose md:!grid-cols-2">
