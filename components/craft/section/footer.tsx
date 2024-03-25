@@ -29,12 +29,7 @@ const Footer = () => {
               <Image src={Logo} alt="Logo" width={100} height={50}></Image>
             </Link>
             <p>
-              <Balancer>
-                Craft UI is a design system and component library for building
-                NextJS Websites. Created by{" "}
-                <a href="https://bridger.to">Bridger Tower</a> and{" "}
-                <a href="https://cameronyoungblood.com">Cameron Youngblood</a>.
-              </Balancer>
+              <Balancer>{fjord.site_description}</Balancer>
             </p>
 
             <div className="flex gap-2">
