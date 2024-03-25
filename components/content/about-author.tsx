@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const AboutAuthor = ({ author }: ArticleProps) => {
   return (
-    <div className="flex gap-6 md:max-w-lg items-center border px-6 py-2 rounded-lg mt-6 md:mt-12">
+    <div className="flex gap-6 md:max-w-xl not-prose items-center border px-6 py-2 rounded-lg mt-6 md:mt-12">
       {/* eslint-disable-next-line */}
       <img
         className="w-24 h-24 rounded-full"

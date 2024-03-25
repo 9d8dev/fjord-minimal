@@ -25,13 +25,14 @@ const Article = ({ post, date, author }: ArticleProps) => {
             </Link>
           )}
         </div>
-        <p
+        <div
+          className="mb-6"
           dangerouslySetInnerHTML={{
             __html:
               post.excerpt.rendered.split(". ").slice(0, 2).join(". ") + ".",
           }}
-        ></p>
-        <BackButton />{" "}
+        ></div>
+        <BackButton />
         {post._embedded?.["wp:featuredmedia"] &&
           post._embedded["wp:featuredmedia"][0]?.media_details?.sizes?.full
             ?.source_url && (

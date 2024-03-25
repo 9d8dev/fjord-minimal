@@ -83,11 +83,7 @@ export default function RootLayout({
 const Nav = ({ className, children, id }: NavProps) => {
   return (
     <nav
-      className={cn(
-        "sticky z-50 top-0 bg-background",
-        "border-b drop-shadow-sm",
-        className
-      )}
+      className={cn("sticky z-50 top-0 bg-background", "border-b", className)}
       id={id}
     >
       <div
