@@ -1,5 +1,5 @@
 // Layout
-import * as Craft from "@/components/craft/layout";
+import * as Craft from "@/components/craft";
 import Logo from "@/public/logo.svg";
 import fjord from "@/fjord.config";
 

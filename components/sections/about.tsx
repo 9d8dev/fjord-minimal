@@ -1,4 +1,4 @@
-import * as Craft from "@/components/craft/layout";
+import * as Craft from "@/components/craft";
 import Image from "next/image";
 import Placeholder from "@/public/placeholder-2.jpg";
 

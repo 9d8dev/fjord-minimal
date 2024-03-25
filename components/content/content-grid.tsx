@@ -1,5 +1,5 @@
 import React from "react";
-import * as Craft from "@/components/craft/layout";
+import * as Craft from "@/components/craft";
 
 const ContentGrid: React.FC<ContentGridProps> = ({
   children,

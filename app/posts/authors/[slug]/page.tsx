@@ -2,7 +2,7 @@
 import fjord from "@/fjord.config";
 
 // Component Imports
-import * as Craft from "@/components/craft/layout";
+import * as Craft from "@/components/craft";
 import ContentGrid from "@/components/content/content-grid";
 import PostCard from "@/components/content/post-card";
 import SecondaryHero from "@/components/sections/secondary-hero";

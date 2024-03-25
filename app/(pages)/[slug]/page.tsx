@@ -2,7 +2,7 @@ import fjord from "@/fjord.config";
 import { Metadata } from "next";
 import { fetchPageBySlug } from "@/lib/data";
 import CTA from "@/components/sections/cta";
-import * as Craft from "@/components/craft/layout";
+import * as Craft from "@/components/craft";
 import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {

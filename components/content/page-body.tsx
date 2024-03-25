@@ -1,6 +1,6 @@
 import BackButton from "@/components/global/elements/back-button";
 import Image from "next/image";
-import * as Craft from "@/components/craft/layout";
+import * as Craft from "@/components/craft";
 
 const PageBody = ({ page, date }: PageProps) => {
   return (

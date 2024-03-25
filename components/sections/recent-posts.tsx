@@ -1,4 +1,4 @@
-import * as Craft from "@/components/craft/layout";
+import * as Craft from "@/components/craft";
 import PostCard from "@/components/content/post-card";
 import fjord from "@/fjord.config";
 import { fetchPosts } from "@/lib/data";

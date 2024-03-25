@@ -2,7 +2,7 @@ import fjord from "@/fjord.config";
 import Link from "next/link";
 import SecondaryHero from "@/components/sections/secondary-hero";
 import CTA from "@/components/sections/cta";
-import * as Craft from "@/components/craft/layout";
+import * as Craft from "@/components/craft";
 import { Metadata } from "next";
 import { fetchPages } from "@/lib/data";
 

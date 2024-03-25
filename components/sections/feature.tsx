@@ -1,5 +1,5 @@
 // Layout
-import * as Craft from "@/components/craft/layout";
+import * as Craft from "@/components/craft";
 
 // Icons
 import { TokensIcon } from "@radix-ui/react-icons";

@@ -1,4 +1,4 @@
-import * as Craft from "@/components/craft/layout";
+import * as Craft from "@/components/craft";
 import { CTAForm } from "./cta-form";
 
 const CTA = () => {

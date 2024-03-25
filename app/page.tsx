@@ -1,4 +1,4 @@
-import * as Craft from "@/components/craft/layout";
+import * as Craft from "@/components/craft";
 import Balancer from "react-wrap-balancer";
 import Hero from "@/components/sections/hero";
 import CTA from "@/components/sections/cta";

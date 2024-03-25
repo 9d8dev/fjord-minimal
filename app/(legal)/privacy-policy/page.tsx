@@ -1,6 +1,6 @@
 "use client";
 
-import * as Craft from "@/components/craft/layout";
+import * as Craft from "@/components/craft";
 import Content from "@/content/terms-of-service.mdx";
 
 const Privacy = () => {

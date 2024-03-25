@@ -1,18 +1,23 @@
-import type { Metadata } from "next";
-import { Manrope, Instrument_Serif } from "next/font/google";
-import * as Craft from "@/components/craft/layout";
 import "./globals.css";
 import fjord from "@/fjord.config";
 
+// Font Imports
+import { Manrope } from "next/font/google";
+
+// Provider Imports
+import { ThemeProvider } from "@/components/global/theme-provider";
+
 // Component Imports
-import { ModeToggle } from "@/components/craft/theme/theme-toggle";
+import * as Craft from "@/components/craft";
+import { ModeToggle } from "@/components/global/elements/theme-toggle";
 import { Button } from "@/components/ui/button";
-import { NavMenu } from "@/components/craft/section/nav-menu";
-import { MobileNav } from "@/components/craft/section/mobile-nav";
+import { NavMenu } from "@/components/global/nav-menu";
+import { MobileNav } from "@/components/global/mobile-nav";
 
 // React and Next Imports
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 
 // Utility Imports
 import Logo from "@/public/logo.svg";
@@ -32,7 +37,7 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: {
     template: fjord.site_title,
-    default: `%s | ${fjord.site_name}`,
+  default: `%s | ${fjord.site_name}`,
     absolute: `Home | ${fjord.site_name}`,
   },
   description: fjord.site_description,
@@ -59,9 +64,18 @@ export default function RootLayout({
 }) {
   return (
     <Craft.Layout className={`${manrope.variable}`}>
-      <Nav />
-      {children}
-      <Footer />
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Nav />
+          {children}
+          <Footer />
+        </ThemeProvider>
+      </body>
     </Craft.Layout>
   );
 }
