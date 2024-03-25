@@ -47,14 +47,6 @@ export const metadata: Metadata = {
   keywords: fjord.keywords,
   authors: fjord.authors,
   metadataBase: new URL(fjord.site_domain),
-  openGraph: {
-    title: fjord.site_title,
-    description: fjord.site_description,
-    url: fjord.site_domain,
-    siteName: fjord.site_name,
-    locale: "en_US",
-    type: "website",
-  },
 };
 
 export default function RootLayout({
