@@ -2,7 +2,7 @@
 
 # Fjord :: Headless WordPress using Next JS 14
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F9d8dev%2Ffjord&project-name=fjord&repository-name=fjord)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F9d8dev%2Ffjord-minimal&project-name=fjord&repository-name=fjord)
 
 See a demo here: [fjord.dev](https://fjord.dev)
 
