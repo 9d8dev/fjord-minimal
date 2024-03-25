@@ -25,7 +25,7 @@ import Balancer from "react-wrap-balancer";
 import { Github, Twitter } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const github_link = "https://github.com/9d8dev/fjord-stripped";
+const github_link = "https://github.com/9d8dev/fjord-minimal";
 const x_link = "https://x.com/bridgertower";
 
 const manrope = Manrope({

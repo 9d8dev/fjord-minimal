@@ -26,7 +26,7 @@ export default function Home() {
           </p>
           <p>
             Get started by cloning the{" "}
-            <a href="https://github.com/9d8dev/fjord-stripped">
+            <a href="https://github.com/9d8dev/fjord-minimal">
               GitHub repository
             </a>{" "}
             today.
