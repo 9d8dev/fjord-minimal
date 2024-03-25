@@ -1,6 +1,5 @@
 import * as Craft from "@/components/craft";
 import Balancer from "react-wrap-balancer";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -9,7 +8,7 @@ export default function Home() {
         <Craft.Container>
           <h1>
             <Balancer>
-              Fjord Stripped :: Headless Wordpress built with Next.js, Tailwind,
+              Fjord Minimal :: Headless Wordpress built with Next.js, Tailwind,
               Shadcn/ui, and Craft.
             </Balancer>
           </h1>
