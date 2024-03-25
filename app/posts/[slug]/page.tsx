@@ -1,10 +1,10 @@
 // Fjord Config
+import * as Craft from "@/components/craft";
 import fjord from "@/fjord.config";
 
 // Component Imports
 import Article from "@/components/content/article-wrapper";
-import RecentPosts from "@/components/sections/recent-posts";
-import CTA from "@/components/sections/cta";
+import RecentPosts from "@/components/global/recent-posts";
 
 // Next Imports
 import { notFound } from "next/navigation";
@@ -45,7 +45,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div>
+    <Craft.Main>
       <Article
         post={{
           ...post,
@@ -55,7 +55,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
         author={author}
       />
       <RecentPosts excludeId={post.id} />
-      <CTA />
-    </div>
+    </Craft.Main>
   );
 }
