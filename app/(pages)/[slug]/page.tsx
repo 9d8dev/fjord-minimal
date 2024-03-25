@@ -1,7 +1,6 @@
 import fjord from "@/fjord.config";
 import { Metadata } from "next";
 import { fetchPageBySlug } from "@/lib/data";
-import CTA from "@/components/sections/cta";
 import * as Craft from "@/components/craft";
 import { notFound } from "next/navigation";
 
@@ -41,8 +40,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
           ></div>
         </Craft.Container>
       </Craft.Section>
-
-      <CTA />
     </Craft.Main>
   );
 }

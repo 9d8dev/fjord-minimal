@@ -1,7 +1,5 @@
 import fjord from "@/fjord.config";
 import Link from "next/link";
-import SecondaryHero from "@/components/sections/secondary-hero";
-import CTA from "@/components/sections/cta";
 import * as Craft from "@/components/craft";
 import { Metadata } from "next";
 import { fetchPages } from "@/lib/data";
@@ -25,11 +23,6 @@ export default async function Pages() {
 
   return (
     <Craft.Main>
-      <SecondaryHero title="All Pages" subtitle={`${fjord.site_name} blog`}>
-        All pages from {fjord.site_name}. These are all the pages from your
-        WordPress.
-      </SecondaryHero>
-
       <Craft.Section>
         <Craft.Container className="space-y-6">
           {data.map((page: PageProps) => (
@@ -58,8 +51,6 @@ export default async function Pages() {
           ))}
         </Craft.Container>
       </Craft.Section>
-
-      <CTA />
     </Craft.Main>
   );
 }

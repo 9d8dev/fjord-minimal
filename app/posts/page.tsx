@@ -4,9 +4,7 @@ import fjord from "@/fjord.config";
 // Component Imports
 import * as Craft from "@/components/craft";
 import PostCard from "@/components/content/post-card";
-import SecondaryHero from "@/components/sections/secondary-hero";
 import ContentGrid from "@/components/content/content-grid";
-import CTA from "@/components/sections/cta";
 import PaginationWrapper from "@/components/content/pagination-wrapper";
 import { Separator } from "@/components/ui/separator";
 
@@ -38,10 +36,6 @@ export default async function Posts({
 
   return (
     <Craft.Main>
-      <SecondaryHero title="All Posts" subtitle={`${fjord.site_name} blog`}>
-        All posts from {fjord.site_name}. These are all the posts from your
-        WordPress.
-      </SecondaryHero>
       <Craft.Section>
         <Craft.Container>
           <ContentGrid id="posts">
@@ -57,7 +51,6 @@ export default async function Posts({
           <PaginationWrapper page={page} lastPage={lastPage} />
         </Craft.Container>
       </Craft.Section>
-      <CTA />
     </Craft.Main>
   );
 }
