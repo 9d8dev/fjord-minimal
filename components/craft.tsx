@@ -1,6 +1,13 @@
-import { cn } from "@/lib/utils";
+import * as React from "react";
 
-// LAYOUT
+// cn util
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+
 // Layout Component
 type LayoutProps = {
   children: React.ReactNode;
@@ -11,7 +18,8 @@ const Layout = ({ children, className }: LayoutProps) => {
   return (
     <html
       lang="en"
-      className={cn("antialiased scroll-smooth focus:scroll-auto", className)}
+      suppressHydrationWarning
+      className={cn("scroll-smooth antialiased focus:scroll-auto", className)}
     >
       {children}
     </html>
@@ -30,15 +38,17 @@ const Main = ({ children, className, id }: MainProps) => {
     <main
       className={cn(
         // General Prose
-        "prose prose:font-sans dark:prose-invert md:prose-lg lg:prose-xl max-w-none",
+        "prose prose-neutral prose:font-sans dark:prose-invert xl:prose-lg max-w-none",
         // Prose Headings
-        "prose-headings:font-normal",
+        "prose-headings:font-normal prose-headings:mt-0",
+        // Prose Paragraphs
+        "prose-p:mb-0",
+        // Prose Strong
+        "prose-strong:font-semibold",
         // Inline Links
-        "prose-a:border-b prose-a:border-b-primary dark:prose-a:border-b-primary prose-a:font-normal prose-a:text-primary dark:prose-a:text-primary hover:prose-a:border-b-primary hover:prose-a:opacity-75 dark:hover:prose-a:border-b-primary prose-a:no-underline prose-a:transition-all",
+        "prose-a:underline prose-a:underline-offset-2 prose-a:decoration-primary hover:prose-a:opacity-80 prose-a:transition-all hover:prose-a:underline-offset-4 prose-a:text-primary",
         // Blockquotes
         "prose-blockquote:not-italic",
-        // Images
-        "prose-img:rounded-lg prose-img:shadow-lg prose-img:border",
         className
       )}
       id={id}
@@ -57,7 +67,7 @@ type SectionProps = {
 
 const Section = ({ children, className, id }: SectionProps) => {
   return (
-    <section className={cn("py-6 md:py-12", className)} id={id}>
+    <section className={cn("py-8 md:py-12", className)} id={id}>
       {children}
     </section>
   );
@@ -72,7 +82,7 @@ type ContainerProps = {
 
 const Container = ({ children, className, id }: ContainerProps) => {
   return (
-    <div className={cn("max-w-5xl mx-auto", "p-6 sm:p-8", className)} id={id}>
+    <div className={cn("mx-auto max-w-5xl", "p-6 sm:p-8", className)} id={id}>
       {children}
     </div>
   );
@@ -89,9 +99,14 @@ const Article = ({ children, className, id }: ArticleProps) => {
   return (
     <article
       className={cn(
-        "prose dark:prose-invert md:prose-lg lg:prose-xl",
-        "prose-headings:font-normal prose-main dark:prose-invert",
-        "prose-img:rounded-lg prose-img:shadow-lg prose-img:border",
+        // General Prose
+        "prose prose-neutral prose:font-sans dark:prose-invert xl:prose-lg",
+        // Prose Headings
+        "prose-headings:font-normal",
+        // Inline Links
+        "prose-a:underline prose-a:underline-offset-2 prose-a:decoration-primary hover:prose-a:opacity-80 prose-a:transition-all hover:prose-a:underline-offset-4 prose-a:text-primary",
+        // Blockquotes
+        "prose-blockquote:not-italic",
         className
       )}
       id={id}
