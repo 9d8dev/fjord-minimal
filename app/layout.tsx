@@ -83,7 +83,7 @@ const Nav = ({ className, children, id }: NavProps) => {
         className="max-w-5xl mx-auto py-4 px-6 sm:px-8 flex justify-between items-center"
       >
         <Link className="hover:opacity-75 transition-all" href="/">
-          <h2 className="sr-only">Craft UI</h2>
+          <h2 className="sr-only">{fjord.site_name}</h2>
           <Image src={fjord.logo} alt="Logo" width={72} height={48}></Image>
         </Link>
         {children}
