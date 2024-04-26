@@ -39,7 +39,6 @@ const Article = ({ post, date, author }: ArticleProps) => {
             <div className="relative my-12 h-96 w-full md:h-[500px]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                placeholder="blur"
                 className="absolute left-0 top-0 h-full w-full object-cover rounded-lg"
                 src={
                   post._embedded["wp:featuredmedia"][0].media_details.sizes.full
