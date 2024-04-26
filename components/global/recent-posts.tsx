@@ -24,7 +24,8 @@ export default async function RecentPosts({
           Catch up on the latest guides and resources from {fjord.site_name}
         </h2>
         <h4 className="text-muted-foreground">
-          Read the latest from our blog.
+          Read the latest from our blog. Learn more about {fjord.site_name} and
+          how to get started.
         </h4>
         <div className="m-auto grid max-w-6xl gap-6 sm:grid-cols-2 md:grid-cols-3 mt-6 md:mt-12">
           {filteredPosts.map((post: PostProps) => (
