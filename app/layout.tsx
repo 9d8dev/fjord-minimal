@@ -8,7 +8,7 @@ import { Manrope } from "next/font/google";
 import { ThemeProvider } from "@/components/global/theme-provider";
 
 // Component Imports
-import * as Craft from "@/components/craft";
+import { Layout, Container, Section } from "@/components/craft";
 import { ModeToggle } from "@/components/global/elements/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { NavMenu } from "@/components/global/nav-menu";
@@ -55,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <Craft.Layout className={`${manrope.variable}`}>
+    <Layout className={manrope.variable}>
       <body>
         <ThemeProvider
           attribute="class"
@@ -68,7 +68,7 @@ export default function RootLayout({
           <Footer />
         </ThemeProvider>
       </body>
-    </Craft.Layout>
+    </Layout>
   );
 }
 
@@ -102,8 +102,8 @@ const Nav = ({ className, children, id }: NavProps) => {
 const Footer = () => {
   return (
     <footer className="border-t drop-shadow-sm">
-      <Craft.Section>
-        <Craft.Container className="grid gap-6 md:grid-cols-2">
+      <Section>
+        <Container className="grid gap-6 md:grid-cols-2">
           <div className="grid gap-6">
             <Link href="/">
               <h3 className="sr-only">Craft UI</h3>
@@ -135,8 +135,8 @@ const Footer = () => {
           <p className="text-muted-foreground block sm:hidden">
             Code © <a href="https://9d8.dev">9d8</a>. 2023-present.
           </p>
-        </Craft.Container>
-      </Craft.Section>
+        </Container>
+      </Section>
     </footer>
   );
 };
